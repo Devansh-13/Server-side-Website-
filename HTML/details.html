@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        body{
+            background-color:teal ;
+        }
+        div{
+            padding:  auto;
+            display: flex;
+            flex-direction: column;
+            gap:16px;
+            text-align: center;
+            justify-content: space-evenly;
+            background-color: antiquewhite;
+            padding: 10px auto;
+            img{
+                display: block;
+                margin: 0 auto;
+                height:400px;
+                max-width: 500px;
+            }
+            p:last-of-type{
+                margin-bottom: 20px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: 300;
+            }
+        }
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+   
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>{#title#}</h1>
+        <h4>Brand : <em>{#brand#}</em></h4>
+        <img src="{#thumbnail#}" alt="image">
+        <h3>Price : <em>{#price#} USD$</em></h3>
+        <h3>Discount : <em>{#discountPercentage#}</em></h3>
+        <h3>Rating : <em>{#rating#}</em></h3>
+        <p><em>{#description#}</em></p>
+        
+    </div>
+</body>
+</html>

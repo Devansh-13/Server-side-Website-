@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All products</title>
+    <style>
+        body{
+            background-color:teal ;
+        }
+        header ~ div{
+            text-align: center;
+            margin: 30px auto;
+            background-color: antiquewhite;
+            width: 600px;
+            padding: 10px auto;
+            border-radius: 10px;
+        }
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        /* padding: 0; */
+   
+    }
+header{
+    
+    position: sticky;/*at start same when sticky always top e o px */
+    top: 0px;
+
+}
+nav{
+    z-index: -3;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    border: 1px solid black;
+    background-color:black;
+    padding: 12px calc(100vw - 400px) 12px 0;
+    &>:hover{
+        scale: 1.1;
+        cursor: pointer;
+    }
+}
+
+
+nav > a{
+    text-decoration: none;
+    color: #fff;
+}
+nav > img:first-of-type{
+    position: absolute;
+    z-index:-4;
+    right:18px;
+    border-radius: 50%;
+}
+body>div:first-of-type{
+    &>p{
+        color: #fff;
+        font-size: 0.8em;
+        background-color:cornflowerblue;
+        text-align: center;
+    }
+}
+section{
+    margin: 3ch 300px 0px 300px;
+    text-align: center;
+    background-color: beige;
+}
+nav>h3:first-of-type{
+    color: #fff;
+    position: absolute;
+    right:18px;
+    z-index: -5;
+    /* text-align: center; */
+
+}
+    </style>
+</head>
+<body>
+    <div>
+        <p>Welcome Sale is available Go on!</p>
+    </div>
+    <header>
+        <nav>
+        
+        <img width="38px" src="https://th.bing.com/th/id/OIP.Hqq_V0Tuqmtsdz2-dp-6SgHaHa?rs=1&pid=ImgDetMain" alt="">
+        <a href="/">Home</a>
+        <a href="/about">About us</a>
+        <a href="/products">Preview</a>
+        <a href="/help">Contact</a>
+        
+        </nav>
+    </header>
+    {#Devansh Mart#}
+</body>
+</html>
