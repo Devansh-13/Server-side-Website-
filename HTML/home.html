@@ -4,26 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All products</title>
+    <link rel="icon" type="image/png" href="https://cdn.pixabay.com/photo/2017/03/29/04/09/shopping-icon-2184065_1280.png">
     <style>
         body{
             background-color:teal ;
         }
-        header ~ div{
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;
+            justify-content: space-evenly;
+            align-items: center;
+            gap:20px;
+        }
+        header + div > div{
+            position: relative;
             text-align: center;
             margin: 30px auto;
             background-color: antiquewhite;
-            width: 600px;
+            width: 350px;
+            max-height: 400px;
             padding: 10px auto;
             border-radius: 10px;
+            h3{
+                font-size: 1em;
+                position: absolute;
+                right:43px;
+                bottom: 34px;
+                background-color: red;
+                color: #fff;
+                border: 2px solid white ;
+                border-radius:4px ;
+                padding: 4px;
+                
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+                font-size: 1.1em;
+                margin-bottom: 8px;
+                color: teal;
+            }
+            img{
+                position: relative;
+                width:200px;
+                height: 130px;
+            }
+            &:hover{
+                scale:1.1;
+            }
         }
         *{
         box-sizing: border-box;
         margin: 0;
         /* padding: 0; */
+
+        @media (max-widht:600px){
+            header + div > div{
+            position: relative;
+            text-align: center;
+            margin: 15px auto;
+            background-color: antiquewhite;
+            width: 300px;
+            max-height: 400px;
+            padding: 10px auto;
+            border-radius: 10px;
+            h3{
+                font-size: 0.8em;
+                position: absolute;
+                right:43px;
+                bottom: 34px;
+                background-color: red;
+                color: #fff;
+                border: 1px solid white ;
+                border-radius:4px ;
+                padding: 2px;
+                
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+                font-size: 1em;
+                margin-bottom: 8px;
+                color: teal;
+            }
+            img{
+                width:200px;
+                height: 130px;
+            }
+            &:hover{
+                scale:1.05;
+            }
+        }
+        }
    
     }
 header{
-    
+    z-index: 5;
     position: sticky;/*at start same when sticky always top e o px */
     top: 0px;
 
@@ -50,10 +128,12 @@ nav > a{
     text-decoration: none;
     color: #fff;
 }
-nav > img:first-of-type{
+nav > a > img:first-of-type{
     position: absolute;
-    z-index:-4;
-    right:18px;
+    height: 25px;
+    z-index:-1;
+    right:30px;
+    bottom:7px;
     border-radius: 50%;
 }
 body>div:first-of-type{
@@ -86,7 +166,7 @@ nav>h3:first-of-type{
     <header>
         <nav>
         
-        <img width="38px" src="https://th.bing.com/th/id/OIP.Hqq_V0Tuqmtsdz2-dp-6SgHaHa?rs=1&pid=ImgDetMain" alt="">
+        <a href="./"><img width="38px" src="https://cdn.pixabay.com/photo/2017/03/29/04/09/shopping-icon-2184065_1280.png" alt=""></a>
         <a href="/">Home</a>
         <a href="/about">About us</a>
         <a href="/products">Preview</a>
@@ -94,6 +174,8 @@ nav>h3:first-of-type{
         
         </nav>
     </header>
-    {#Devansh Mart#}
+    <div class="container">
+        {#Devansh Mart#}
+    </div>
 </body>
 </html>

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
+    <link rel="icon" type="image/png" href="https://cdn.pixabay.com/photo/2017/03/29/04/09/shopping-icon-2184065_1280.png">
     <style>
         body{
             background-color:teal ;
         }
         div{
+            
             padding:  auto;
             display: flex;
             flex-direction: column;
@@ -22,11 +24,23 @@
                 margin: 0 auto;
                 height:400px;
                 max-width: 500px;
+                border-radius: 15px;
             }
             p:last-of-type{
                 margin-bottom: 20px;
                 font-family:Verdana, Geneva, Tahoma, sans-serif;
                 font-weight: 300;
+            }
+            #discount{
+                font-size: 1.3em;
+                position: absolute;
+                right:30%;
+                bottom: 30%;
+                background-color: red;
+                color: #fff;
+                border: 2px solid white ;
+                border-radius:4px ;
+                padding: 4px;
             }
         }
         *{
@@ -43,7 +57,7 @@
         <h4>Brand : <em>{#brand#}</em></h4>
         <img src="{#thumbnail#}" alt="image">
         <h3>Price : <em>{#price#} USD$</em></h3>
-        <h3>Discount : <em>{#discountPercentage#}</em></h3>
+        <h3 id="discount">Discount : <em>{#discountPercentage#}</em></h3>
         <h3>Rating : <em>{#rating#}</em></h3>
         <p><em>{#description#}</em></p>
         
